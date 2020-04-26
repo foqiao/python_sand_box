@@ -1,0 +1,7 @@
+1) Pig
+2) Goat
+3) Duck
+4) Cow
+5) Chicken
+6) Sheep
+7) Horse
