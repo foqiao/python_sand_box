@@ -13,11 +13,14 @@ with open('email_directory.csv', 'r') as email:
 
     #create a new file called editted_email_directory.txt
     with open('editted_email_directory.csv', 'w') as edit_email:
+        field_names = ['Name', 'Age', 'Email']
+
         #'\t' represents tab, the csv_write will separate the content with tabs
         csv_write = csv.writer(edit_email, delimiter='\t')
 
         #same as the line 12
-        csv_dict_writer = csv.DictWriter(edit_email, delimiter='\t')
+        #fieldnames are the title of each column of contents in the csv file
+        csv_dict_writer = csv.DictWriter(edit_email, fieldnames=field_names, delimiter='\t')
 
         #write the header of the file including the title
         csv_dict_writer.writeheader()
